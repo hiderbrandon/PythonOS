@@ -18,8 +18,6 @@ def file_date(filename):
   timestamp = os.path.getmtime(filename)
   # Convert the timestamp into a readable format, then into a string
   theDate = datetime.datetime.fromtimestamp(timestamp)
-
-  print(theDate)
   # Return just the date portion 
   # Hint: how many characters are in “yyyy-mm-dd”? 
   return ("{y}".format(y=str(theDate)[0:10]))

@@ -7,9 +7,10 @@ import os
 
 def create_python_script(filename):
   comments = "# Start of a new Python program"
-  with open(filename , "x" ) as theFile:
+  with open(filename , "a" ) as theFile:
     print(f"{comments}" ,file=theFile)
-    filesize = os.path.getsize(filename)
-  return(filesize)
+  
+  filesize = os.path.getsize(filename)
+  return(filesize - 1)
 
 print(create_python_script("program.py"))
